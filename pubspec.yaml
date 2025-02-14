@@ -5,13 +5,13 @@ repository: https://github.com/ronjb/selectable
 
 environment:
   sdk: ">=3.4.0 <4.0.0"
-  flutter: ">=3.29.0"
+  flutter: ">=3.24.1"
 
 dependencies:
   characters: ^1.2.0
   collection: ^1.16.0
   equatable: ^2.0.5
-  float_column: ^3.0.0
+  float_column: #^3.0.0
   flutter:
     sdk: flutter
   url_launcher: ^6.1.7
