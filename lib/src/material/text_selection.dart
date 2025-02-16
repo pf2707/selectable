@@ -198,7 +198,7 @@ class _MaterialTextSelectionControls extends SelectionControls {
 
     final primaryY = math.min(
         viewport.bottom - (_kPopupMenuContentDistance * 3.0),
-        selectionRects!.first.top - _kPopupMenuContentDistance) - 20;
+        selectionRects!.first.top - _kPopupMenuContentDistance);
 
     double? secondaryY;
 
@@ -225,8 +225,8 @@ class _MaterialTextSelectionControls extends SelectionControls {
       // print('building menu at $arrowTipX, $localBarTopY');
       return delegate.buildMenu(
         context,
-        primaryAnchor: Offset(arrowTipX, primaryY + topOverlayHeight - 70),
-        secondaryAnchor: Offset(arrowTipX, secondaryY),
+        primaryAnchor: Offset(arrowTipX, primaryY + topOverlayHeight - 70 - 20),
+        secondaryAnchor: Offset(arrowTipX, secondaryY - 20),
       );
     }
 
@@ -237,7 +237,7 @@ class _MaterialTextSelectionControls extends SelectionControls {
       localBarTopY = secondaryY;
     }
 
-    final Offset preciseMidpoint = Offset(arrowTipX, localBarTopY);
+    final Offset preciseMidpoint = Offset(arrowTipX, localBarTopY - 20);
 
     return CustomSingleChildLayout(
       delegate: _TextSelectionPopupMenuLayout(
