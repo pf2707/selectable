@@ -198,7 +198,7 @@ class _MaterialTextSelectionControls extends SelectionControls {
 
     final primaryY = math.min(
         viewport.bottom - (_kPopupMenuContentDistance * 3.0),
-        selectionRects!.first.top - _kPopupMenuContentDistance);
+        selectionRects!.first.top - _kPopupMenuContentDistance) - 20;
 
     double? secondaryY;
 
