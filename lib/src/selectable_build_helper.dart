@@ -257,7 +257,7 @@ class _PopupMenuState extends State<_PopupMenu> {
             final scrollOffset = -renderObjScrollPos + widget.topOverlayHeight;
             final viewportExtent =
                 widget.scrollController!.position.viewportDimension -
-                    widget.topOverlayHeight + 20;
+                    widget.topOverlayHeight;
             viewport =
                 Rect.fromLTWH(0, scrollOffset - 20, viewport.width, viewportExtent)
                     .intersect(viewport);
