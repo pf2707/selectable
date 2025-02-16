@@ -20,7 +20,7 @@ const double _kButtonPadding = 10.0;
 
 // Minimal padding from all edges of the selection popup menu to all edges of
 // the viewport.
-const double _kPopupMenuScreenPadding = 8.0;
+const double _kPopupMenuScreenPadding = 0.0; //8.0;
 const double _kPopupMenuHeight = 44.0;
 const double _kPopupMenuContentDistance = 8.0;
 
@@ -225,8 +225,8 @@ class _MaterialTextSelectionControls extends SelectionControls {
       // print('building menu at $arrowTipX, $localBarTopY');
       return delegate.buildMenu(
         context,
-        primaryAnchor: Offset(arrowTipX, primaryY + topOverlayHeight - 70 - 20),
-        secondaryAnchor: Offset(arrowTipX, secondaryY - 20),
+        primaryAnchor: Offset(arrowTipX, primaryY + topOverlayHeight - 70),
+        secondaryAnchor: Offset(arrowTipX, secondaryY),
       );
     }
 
@@ -237,7 +237,7 @@ class _MaterialTextSelectionControls extends SelectionControls {
       localBarTopY = secondaryY;
     }
 
-    final Offset preciseMidpoint = Offset(arrowTipX, localBarTopY - 20);
+    final Offset preciseMidpoint = Offset(arrowTipX, localBarTopY);
 
     return CustomSingleChildLayout(
       delegate: _TextSelectionPopupMenuLayout(

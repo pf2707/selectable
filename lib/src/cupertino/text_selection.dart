@@ -27,7 +27,7 @@ const double _kSelectionHandleRadius = 6;
 
 // Minimal padding from all edges of the selection popup menu to all edges of
 // the screen.
-const double _kPopupMenuScreenPadding = 8.0;
+const double _kPopupMenuScreenPadding = 0.0; //8.0;
 // Minimal padding from tip of the selection popup menu arrow to horizontal
 // edges of the screen. Eyeballed value.
 const double _kArrowScreenPadding = 26.0;
